@@ -96,6 +96,52 @@ img {
 }
 
 .counter-btn {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.add-btn {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+}
+
+.add-btn:hover {
+  color: gray;
+  -webkit-transition: 0.4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
+}
+
+.total-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.clear-btn {
+  background-color: transparent;
+  outline: 2px solid #5A20CB;
+  border: none;
+  color: #5A20CB;
+  height: 2rem;
+  width: 9rem;
+  margin: 1vh 0 4vh 50vw;
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+}
+
+.clear-btn:hover {
+  color: white;
+  background-color: #5A20CB;
+  -webkit-transition: 0.4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */

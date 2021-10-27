@@ -100,5 +100,46 @@ text-transform: capitalize;
 }
 
 .counter-btn{
-    display: block;
+    display: flex;
+    flex-direction: column;
+}
+
+//btns present on the add/remove section
+
+.add-btn{
+    background-color: transparent;
+    outline: none;
+    border: none;
+   
+    font-size: 2rem;
+}
+.add-btn:hover{
+    color:gray;
+    transition: 0.4s all ease-in-out;
+}
+
+.total-container{
+    display: flex;
+    justify-content:space-around ;
+}
+
+.clear-btn{
+    background-color: transparent;
+    outline: 2px solid $color-secondary;
+    border: none;
+    color: $color-secondary;
+    height: 2rem;
+    width: 9rem;
+margin: 1vh 0 4vh 50vw;
+letter-spacing: 0.2rem;
+font-size: 1rem;
+
+
+}
+
+.clear-btn:hover{
+    color: white;
+    background-color: $color-secondary;
+    transition: 0.4s all ease-in-out;
+    
 }
