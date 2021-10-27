@@ -60,6 +60,24 @@ if(action.type==="decrease"){
     return {...currentState, cartItems:tempCart}
 }
 
+if(action.type==="ADDALL"){ 
+
+  let {total, amount} =currentState.cartItems.
+    reduce((cartTotal, cartItem)=>{
+        const {price, amount} = cartItem;
+        const itemTotal = price *amount
+        cartTotal.amount += amount;
+        cartTotal.total += itemTotal
+
+        return cartTotal
+    },{ total:0, amount:0})
+    total = parseFloat(total.toFixed())
+   return { ...currentState, total, amount}
+    // currentState.cartItems.reduce((acc, curr)=>{
+
+    // },currentState.total)
+}
+
     return currentState
 
 

@@ -1,4 +1,4 @@
-import React, {useContext, useState, useReducer} from 'react'
+import React, {useContext, useState, useEffect, useReducer} from 'react'
 
 import reducer from './Reducer';
 import { data } from './data';
@@ -8,7 +8,7 @@ const initialState={
     loading: false,
     cartItems: data, 
     total:0, 
-    toggleAmount:1
+    amount:1
 }
 export const CartContext = ({children}) => {
 
@@ -35,6 +35,11 @@ export const CartContext = ({children}) => {
         dispatch({type:"decrease", payLoad:id})
 
     }
+
+    useEffect(() => {
+       dispatch({ type: "ADDALL" });
+    }, [state.cartItems])
+    
     return (
         <div>
             <cartContextProvider.Provider value={{...state, clearCart, removeItem, addItem, decreaseItem}}>
