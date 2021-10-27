@@ -1,12 +1,12 @@
 import React from 'react'
 import {BsArrowUp, BsArrowDown} from "react-icons/bs";
 import { useCartContext } from './CartContext';
-const CartItems = ({id, price, name, image, amount}) => {
+const CartItems = ({id, price, name, img, amount}) => {
     const {removeItem, addItem, decreaseItem} = useCartContext();
     return (
       <div className="individual-product-container">
         <div className="cart-ind"key={id}>
-          <img src={image} />
+          <img src={img} />
           <div>
             <h3>{name}</h3>
             <p>${price}</p>

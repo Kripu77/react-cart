@@ -78,6 +78,13 @@ if(action.type==="ADDALL"){
     // },currentState.total)
 }
 
+if(action.type ==="LOADING"){
+    return {...currentState, loading:true}
+}
+
+if(action.type==='DISPLAY_ITEMS'){
+    return {...currentState, cartItems:action.payLoad, loading: false}
+}
     return currentState
 
 
