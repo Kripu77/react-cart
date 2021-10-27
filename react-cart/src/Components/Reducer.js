@@ -20,7 +20,11 @@ return {...eachItem, amount: eachItem.amount+1}
          return eachItem
 
      });
+
+
     return {...currentState, cartItems:tempCart}    }
+
+    
 
 
 
@@ -43,6 +47,18 @@ return {...eachItem, amount: eachItem.amount+1}
 // //        });
 // //        return {...currentState, cartItems:tempCart}
 //     }
+
+if(action.type==="decrease"){
+    let tempCart  = currentState.cartItems.map((eachItem)=>{
+        if(eachItem.id === action.payLoad){
+            return {...eachItem, amount: eachItem.amount-1}
+            
+        }
+        return eachItem
+    })
+    return {...currentState, cartItems:tempCart}
+}
+
     return currentState
 
 

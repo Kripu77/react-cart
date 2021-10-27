@@ -8,7 +8,7 @@ const initialState={
     loading: false,
     cartItems: data, 
     total:0, 
-    amount:1
+    toggleAmount:1
 }
 export const CartContext = ({children}) => {
 
