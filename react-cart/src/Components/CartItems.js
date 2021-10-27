@@ -1,7 +1,7 @@
 import React from 'react'
 import {BsArrowUp, BsArrowDown} from "react-icons/bs";
 
-const CartItems = ({id, price, name, image}) => {
+const CartItems = ({id, price, name, image, dispatch}) => {
     return (
       <div className="individual-product-container">
         <div className="cart-ind">

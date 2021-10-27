@@ -12,11 +12,19 @@ const initialState={
 }
 export const CartContext = ({children}) => {
 
+    
 
-    const [state, dispatch] = useReducer(reducer, initialState)
+    const [state, dispatch] = useReducer(reducer, initialState);
+
+
+    //pass in all your dispatch methods in a fucntion
+
+    const clearCart = () =>{
+        dispatch({type:"clear"})
+    }
     return (
         <div>
-            <cartContextProvider.Provider value={{...state}}>
+            <cartContextProvider.Provider value={{...state, clearCart}}>
                 {children}
             </cartContextProvider.Provider>
         </div>
