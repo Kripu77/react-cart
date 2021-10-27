@@ -67,11 +67,11 @@ if(action.type==="ADDALL"){
         const {price, amount} = cartItem;
         const itemTotal = price *amount
         cartTotal.amount += amount;
-        cartTotal.total += itemTotal
+        cartTotal.total += parseFloat(itemTotal.toFixed())
 
         return cartTotal
     },{ total:0, amount:0})
-    total = parseFloat(total.toFixed())
+  
    return { ...currentState, total, amount}
     // currentState.cartItems.reduce((acc, curr)=>{
 
