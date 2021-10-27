@@ -1,8 +1,10 @@
 import React from 'react'
 
 import { BsBag } from "react-icons/bs";
-
+import { useCartContext } from './CartContext';
 const Navbar = () => {
+console.log(useCartContext())
+const {total} = useCartContext()
     return (
       <nav>
         <section className="container">
@@ -10,7 +12,9 @@ const Navbar = () => {
           <button className='cart-btn'>
             <BsBag />
           </button>
-          <p className='count-display'>2</p>
+          { total === 0 ? 
+        "" : <p className='count-display'>{total}</p>
+}
         </section>
       </nav>
     );

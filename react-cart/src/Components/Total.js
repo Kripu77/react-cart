@@ -2,9 +2,10 @@ import React from 'react'
 
 const Total = () => {
     return (
-        <div>
-            <h1> Total</h1>
-        </div>
+        <section className='total-container'>
+            <hr/>
+
+        </section>
     )
 }
 

@@ -42,4 +42,60 @@ body {
   border-radius: 50%;
   vertical-align: top;
 }
+
+main {
+  margin-top: 5rem;
+}
+
+.header {
+  text-align: center;
+}
+
+.total-container {
+  margin-top: 4rem;
+}
+
+.product-details {
+  margin-top: 4rem;
+  padding: 4rem;
+}
+
+img {
+  height: 20rem;
+}
+
+.individual-product-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart-ind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.remove-btn {
+  background-color: transparent;
+  width: 7rem;
+  outline: none;
+  border: none;
+  color: gray;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.remove-btn:hover {
+  color: #242B2E;
+  -webkit-transition: 0.4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
+}
+
+.counter-btn {
+  display: block;
+}
 /*# sourceMappingURL=style.css.map */

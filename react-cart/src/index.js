@@ -1,4 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-ReactDOM.render(<App/>, document.getElementById('root'));
+import { CartContext } from './Components/CartContext';
+ReactDOM.render(
+  <CartContext>
+    <App />
+  </CartContext>,
+
+  document.getElementById("root")
+);

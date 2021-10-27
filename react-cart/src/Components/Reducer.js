@@ -1,11 +1,6 @@
-import React,{useState, useEffect, useReducer} from 'react'
+const reducer=(currentState, action)=>{
 
-const Reducer = () => {
-    return (
-        <div>
-            
-        </div>
-    )
+
 }
 
-export default Reducer
+export default reducer;
