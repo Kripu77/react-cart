@@ -1,8 +1,8 @@
 import React from 'react'
 import {BsArrowUp, BsArrowDown} from "react-icons/bs";
 import { useCartContext } from './CartContext';
-const CartItems = ({id, price, name, image}) => {
-    const {removeItem} = useCartContext();
+const CartItems = ({id, price, name, image, amount}) => {
+    const {removeItem, addItem, decreaseItem} = useCartContext();
     return (
       <div className="individual-product-container">
         <div className="cart-ind"key={id}>
@@ -14,12 +14,14 @@ const CartItems = ({id, price, name, image}) => {
           </div>
         </div>
         <div className="counter-btn">
-          <button className="add-btn">
+            {/* add amount */}
+          <button className="add-btn" onClick={()=>addItem(id)}>
           
             <BsArrowUp />
           </button>
-<h2>1</h2>
-          <button className="add-btn">
+<h2>{amount}</h2>
+{/* decrease amount */}
+          <button className="add-btn" onClick={()=>decreaseItem(id)}>
             <BsArrowDown />
           </button>
         </div>

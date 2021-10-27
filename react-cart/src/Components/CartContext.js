@@ -8,7 +8,7 @@ const initialState={
     loading: false,
     cartItems: data, 
     total:0, 
-    amount:0
+    amount:1
 }
 export const CartContext = ({children}) => {
 
@@ -26,9 +26,18 @@ export const CartContext = ({children}) => {
     const removeItem = (id)=>{
         dispatch({type:"remove", payLoad:id})
     }
+
+    const addItem = (id)=>{
+        dispatch({type:"add", payLoad:id})
+    }
+
+    const decreaseItem = (id)=>{
+        dispatch({type:"decrease", payLoad:id})
+
+    }
     return (
         <div>
-            <cartContextProvider.Provider value={{...state, clearCart, removeItem}}>
+            <cartContextProvider.Provider value={{...state, clearCart, removeItem, addItem, decreaseItem}}>
                 {children}
             </cartContextProvider.Provider>
         </div>

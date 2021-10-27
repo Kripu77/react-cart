@@ -4,7 +4,7 @@ import { BsBag } from "react-icons/bs";
 import { useCartContext } from './CartContext';
 const Navbar = () => {
 console.log(useCartContext())
-const {total} = useCartContext()
+const {total, cartItems} = useCartContext()
     return (
       <nav>
         <section className="container">
@@ -12,9 +12,9 @@ const {total} = useCartContext()
           <button className='cart-btn'>
             <BsBag />
           </button>
-          { total === 0 ? 
-        "" : <p className='count-display'>{total}</p>
-}
+         {/* { total === 0 ?  */}
+          <p className='count-display'>{cartItems.length}</p>
+
         </section>
       </nav>
     );
