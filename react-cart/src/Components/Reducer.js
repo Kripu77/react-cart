@@ -55,7 +55,8 @@ if(action.type==="decrease"){
             
         }
         return eachItem
-    })
+        //to ensure that cart doesnot go under -1 we can chain the filter method, specifically meaning only return those items which are not under 1
+    }).filter((eachItem)=> eachItem.amount!==0)
     return {...currentState, cartItems:tempCart}
 }
 
