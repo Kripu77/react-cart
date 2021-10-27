@@ -22,9 +22,13 @@ export const CartContext = ({children}) => {
     const clearCart = () =>{
         dispatch({type:"clear"})
     }
+
+    const removeItem = (id)=>{
+        dispatch({type:"remove", payLoad:id})
+    }
     return (
         <div>
-            <cartContextProvider.Provider value={{...state, clearCart}}>
+            <cartContextProvider.Provider value={{...state, clearCart, removeItem}}>
                 {children}
             </cartContextProvider.Provider>
         </div>

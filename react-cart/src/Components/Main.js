@@ -2,7 +2,7 @@ import React from 'react'
 import { useCartContext } from './CartContext'
 import CartItems from './CartItems';
 const Main = () => {
-   const{amount, cartItems, total, dispatch} = useCartContext();
+   const{amount, cartItems, total, removeItem} = useCartContext();
    if(cartItems.length===0){
        return (
          <main>
@@ -19,7 +19,7 @@ const Main = () => {
                <div className='product-details'>
                    {cartItems.map((value)=>{
                     
-                       return <CartItems {...value}/>
+                       return <CartItems {...value} />
 
                    })}
                </div>
