@@ -1,9 +1,15 @@
 import React from 'react'
+import Main from './Components/Main'
+import Navbar from './Components/Navbar'
+import Total from './Components/Total'
+import "./Css/style.css"
 
 const App = () => {
     return (
         <div>
-            <h1> Test</h1>
+        <Navbar/>
+        <Main/>
+        <Total/>
         </div>
     )
 }
