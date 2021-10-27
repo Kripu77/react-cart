@@ -42,7 +42,7 @@ export const CartContext = ({children}) => {
     }, [state.cartItems])
     
 
-    //to fecth data 
+    //to fecth data, dispacth loading event after loading is complete run the FETCH API
 
     const fetchData = ()=>{
         dispatch({type:"LOADING"});

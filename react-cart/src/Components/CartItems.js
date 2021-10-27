@@ -1,14 +1,14 @@
 import React from 'react'
 import {BsArrowUp, BsArrowDown} from "react-icons/bs";
 import { useCartContext } from './CartContext';
-const CartItems = ({id, price, name, img, amount}) => {
+const CartItems = ({id, price, name, title, img, amount}) => {
     const {removeItem, addItem, decreaseItem} = useCartContext();
     return (
       <div className="individual-product-container">
         <div className="cart-ind"key={id}>
           <img src={img} />
           <div>
-            <h3>{name}</h3>
+            <h3>{title}</h3>
             <p>${price}</p>
             <button className="remove-btn" onClick={()=>removeItem(id)}>remove</button>
           </div>
